@@ -1973,7 +1973,12 @@ using System;
 			/// <param name="seed">The initial seed for the generator</param>
 			public SecureRandomSupport(byte[] seed)
 			{
+#if __XAMARIN__
+				var generator = new System.Security.Cryptography.RNGCryptoServiceProvider();
+                this.generator = generator;
+#else
 				this.generator = new System.Security.Cryptography.RNGCryptoServiceProvider(seed);
+#endif
 			}
 
 			/// <summary>
@@ -2007,7 +2012,12 @@ using System;
 			/// <param name="newSeed">Seed to create a new random number generator</param>
 			public void SetSeed(byte[] newSeed)
 			{
-				this.generator = new System.Security.Cryptography.RNGCryptoServiceProvider(newSeed);
+#if __XAMARIN__
+				var generator = new System.Security.Cryptography.RNGCryptoServiceProvider();
+                this.generator = generator;
+#else
+                this.generator = new System.Security.Cryptography.RNGCryptoServiceProvider(newSeed);
+#endif
 			}
 
 			/// <summary>
