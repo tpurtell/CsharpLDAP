@@ -686,14 +686,7 @@
     <Compile Include="..\Novell.Directory.LDAP\Novell.Directory.Ldap\SupportClass.cs">
       <Link>Shared\SupportClass.cs</Link>
     </Compile>
-    <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\Novell.Directory.LDAP\Novell.Directory.Ldap.Utilclass\ExceptionMessages.txt">
