@@ -696,6 +696,14 @@
       <Link>Shared\Utilclass\ResultCodeMessages.txt</Link>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\lib\ExceptionMessages.resources">
+      <Link>ExceptionMessages.resources</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\lib\ResultCodeMessages.resources">
+      <Link>ResultCodeMessages.resources</Link>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
